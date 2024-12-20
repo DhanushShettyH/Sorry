@@ -28,7 +28,7 @@
         <p class="heart-icon">💜</p>
       </div>
       <div class="footer">
-        <a href="https://wa.me/8105532624" class="back-button" target="_blank">Click here</a>
+        <button class="back-button" onclick="openWhatsApp()">Contact on WhatsApp</button>
       </div>
     </div>
   </div>
@@ -37,6 +37,15 @@
     function goBack() {
       window.history.back();
     }
+
+    function openWhatsApp() {
+  const phoneNumber = '918105532624'; // Replace with the recipient's phone number
+  const message = 'Hi Anushree! '; // Replace with the desired message
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  
+  window.open(url, '_blank');
+}
+
   </script>
 </body>
 </html>
